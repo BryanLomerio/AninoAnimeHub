@@ -1,8 +1,22 @@
 import React from 'react';
 import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
 import './Login.css';
+import backgroundImage from '/src/assets/thumb-1920-1378545.jpg';
 
 function Login() {
+
+    const styles = {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: -1,
+    };
     return (
         <div className='login-container'>
             <div className='login-form'>
