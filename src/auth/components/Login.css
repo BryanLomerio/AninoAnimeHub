@@ -1,0 +1,130 @@
+.login-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../src/assets/thumb-1920-1378545.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.231);
+    backdrop-filter: blur(0.50rem);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    width: 18.75rem;
+    text-align: center;
+    color: white;
+
+    margin-bottom: 1.25rem;
+}
+
+.login-button {
+    color: white;
+}
+
+h1 {
+    margin-bottom: 1.25rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
+    border: 1px solid #ccc;
+    border-radius: 3.125rem;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.279);
+}
+
+.input-field::placeholder {
+    color: white;
+}
+
+.forgot-password {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.forgot-password input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.forgot-password p {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.button-container {
+    margin-bottom: 0.625rem;
+}
+
+.login-button {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+
+}
+
+.login-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.register-text {
+    margin-top: 0.625rem;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+    border-radius: 0.20rem;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    border-radius: 0.30rem;
+    background-color: rgba(255, 255, 255, 0.279);
+    color: white;
+    padding: 0.625rem 1rem;
+    border: none;
+    margin: 0 0.625rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    gap: 1rem;
+    backdrop-filter: blur(0.50rem);
+}
+
+.social-button svg {
+    width: 1rem;
+    height: 1.5rem;
+}
+
+.social-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
