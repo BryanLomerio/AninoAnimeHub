@@ -15,7 +15,7 @@ function Login() {
             left: 0,
             right: 0,
             bottom: 0,
-            zIndex: -1,
+            zIndex: 999,
         }}>
             <div className='login-form'>
                 <h1>Login</h1>
