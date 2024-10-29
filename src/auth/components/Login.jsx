@@ -10,9 +10,12 @@ function Login() {
                 <input type="text" placeholder="Email" className='input-field' required />
                 <input type="password" placeholder="Password" className='input-field' required />
                 <div className='forgot-password'>
-                    <input type="checkbox" label='checkbox' /> Remember me
+                    <label>
+                        <input type="checkbox" id="rememberMe" /> Remember me
+                    </label>
                     <p>Forgot Password</p>
                 </div>
+
                 <div className='button-container'>
                     <button className='login-button'><b>Login</b></button>
                 </div>
