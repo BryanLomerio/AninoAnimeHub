@@ -1,24 +1,22 @@
 import React from 'react';
 import { FaGoogle, FaFacebook, FaTwitter } from 'react-icons/fa';
 import './Login.css';
-import backgroundImage from '/src/assets/thumb-1920-1378545.jpg';
+import backgroundImage from "/src/assets/thumb-1920-1378545.jpg";// Adjust the path accordingly
 
 function Login() {
-
-    const styles = {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: -1,
-    };
     return (
-        <div className='login-container'>
+        <div className='login-container' style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: -1,
+        }}>
             <div className='login-form'>
                 <h1>Login</h1>
                 <input type="text" placeholder="Email" className='input-field' required />
@@ -30,7 +28,7 @@ function Login() {
                 <div className='button-container'>
                     <button className='login-button'><b>Login</b></button>
                 </div>
-                <p className='register-text'>Don't have account? <b>Register</b></p>
+                <p className='register-text'>Don't have an account? <b>Register</b></p>
             </div>
             <div className='social-buttons'>
                 <button className='social-button'><FaGoogle /> Google</button>
