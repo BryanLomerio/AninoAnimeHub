@@ -44,14 +44,13 @@ function Login() {
                     <button className='login-button' onClick={handleLogin}><b>Login</b></button>
                 </div>
                 <p className='register-text'>Don't have an account?
-                <Link to="/signup">Register</Link>
+                    <a href="/signup">Register</a>
                 </p>
             </div>
             <div className='social-buttons'>
                 <button className='social-button'><FaGoogle /> Google</button>
                 <button className='social-button'><FaFacebook /> Facebook</button>
                 <button className='social-button'><FaTwitter /> Twitter</button>
-                
             </div>
         </div>
     );
