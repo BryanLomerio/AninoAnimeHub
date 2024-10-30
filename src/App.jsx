@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Login from './auth/components/Login';
-import SignupForm from './auth/components/SignupForm';
+import SignupForm from '../src/auth/components/SignupForm';
 import Home from './views/home/Home'; 
 
 function App() {
