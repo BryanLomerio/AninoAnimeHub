@@ -10,18 +10,17 @@ function SignupForm() {
     };
 
     return (
-        <div className='login-form'>
-            <div className='signup-container'>
+        <div className='login-container'>
+            <div className='login-form'>
                 <div className='backbtn'>
-                    <button className='arrow-btn' onClick={handleBackClick}>
-                        <IoIosArrowBack className='back-icon' />
-                    </button>
+                        <IoIosArrowBack className='back-icon' onClick={handleBackClick} />
                     <h1>Signup</h1>
                 </div>
 
                 <input type="text" placeholder="Username" className='input-field' required />
                 <input type="email" placeholder="Email" className='input-field' required />
                 <input type="password" placeholder="Password" className='input-field' required />
+                
                 <button className='login-button'><b>Signup</b></button>
             </div>
         </div>

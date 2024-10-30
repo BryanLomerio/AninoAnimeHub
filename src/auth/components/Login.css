@@ -165,9 +165,5 @@ h1 {
     top: 50%;
     width: 30px;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.345);
 }
 
-.arrow-btn {
-    border: none;
-}
