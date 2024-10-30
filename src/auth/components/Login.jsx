@@ -44,7 +44,7 @@ function Login() {
                     <button className='login-button' onClick={handleLogin}><b>Login</b></button>
                 </div>
                 <p className='register-text'>Don't have an account?
-                    <a href="/signup">Register</a>
+                <Link to="/signup">Register</Link>
                 </p>
             </div>
             <div className='social-buttons'>
