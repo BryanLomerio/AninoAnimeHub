@@ -51,6 +51,7 @@ function Login() {
                 <button className='social-button'><FaGoogle /> Google</button>
                 <button className='social-button'><FaFacebook /> Facebook</button>
                 <button className='social-button'><FaTwitter /> Twitter</button>
+                
             </div>
         </div>
     );
