@@ -42,7 +42,7 @@
     opacity: 0;
     transform: translateX(-10px); 
     transition: opacity 0.3s ease, transform 0.3s ease;
-    background-color: #662d91;
+    background-color: rgb(255, 144, 0);
     justify-content: center;
     padding: 10px;
     text-overflow: ellipsis;
@@ -102,4 +102,5 @@ padding: 0;
     color: inherit; 
     border: none;
     cursor: pointer;
+    font-weight: bold; 
   }
