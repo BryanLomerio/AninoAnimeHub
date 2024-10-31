@@ -8,11 +8,13 @@ import MyLists from './views/MyLists/MyLists';
 import Layout from './layout/Layout';
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const initialTheme = localStorage.getItem('theme') || 'light';
+  const [theme, setTheme] = useState(initialTheme);
   const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
 
   useEffect(() => {
     document.body.className = theme; 
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
@@ -37,7 +39,7 @@ function App() {
         <Route path="/home" element={
           <Layout 
             toggleTheme={toggleTheme} 
-            isLightMode={document.body.className === 'light'}
+            isLightMode={theme === 'light'}
             isUserDropdownOpen={isUserDropdownOpen}
             handleUserClick={handleUserClick}
             handleLogout={handleLogout}
@@ -49,7 +51,7 @@ function App() {
         <Route path="/mylists" element={
           <Layout 
             toggleTheme={toggleTheme} 
-            isLightMode={document.body.className === 'light'}
+            isLightMode={theme === 'light'}
             isUserDropdownOpen={isUserDropdownOpen}
             handleUserClick={handleUserClick}
             handleLogout={handleLogout}
