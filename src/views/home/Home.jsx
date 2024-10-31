@@ -45,7 +45,11 @@ const Home = () => {
     return (
         <div>
             <h1 className='title'>AninoAnime</h1>
-            <h1 className='sub-title'>Trending</h1>
+         
+
+            <div className='test'>
+
+            <h1 className='sub-title'>Top</h1>
             <div className='cards-container'> 
                 <div className='cards'>
                     {visibleAnime.map((anime, index) => (
@@ -63,6 +67,7 @@ const Home = () => {
                         </div>
                     ))}
                 </div>
+            </div>
             </div>
             
             {visibleCount < allAnime.length && (

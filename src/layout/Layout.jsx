@@ -1,13 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { IoMdHome, IoMdSettings } from "react-icons/io";
-import { FaSearch, FaFireAlt, FaListUl } from "react-icons/fa";
-import { FaStore } from "react-icons/fa";
+import { FaSearch, FaFireAlt, FaListUl, FaStore } from "react-icons/fa";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import UserImg from "../assets/bryan.webp";
-import './Layout.css'
+import LoadingGif from "../assets/loading.gif";
+import './Layout.css';
 
 const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handleUserClick, handleLogout }) => {
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => setLoading(false), 1800); 
+
+        return () => clearTimeout(timer);
+    }, [location]);
+
     return (
         <div className="layout-container">
             <nav className="sidebar">
@@ -76,7 +87,14 @@ const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handle
             </nav>
 
             <main className="content">
-                {children} 
+                {loading ? (
+                    <div className="loading-container">
+                        <img src={LoadingGif} alt="Loading..." className="loading-gif" />
+                        <p className="loading-text">Loading.....</p>
+                    </div>
+                ) : (
+                    children
+                )}
             </main>
         </div>
     );

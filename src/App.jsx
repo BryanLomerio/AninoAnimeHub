@@ -6,6 +6,7 @@ import SignupForm from './auth/components/SignupForm';
 import Home from './views/home/Home'; 
 import MyLists from './views/MyLists/MyLists'; 
 import Layout from './layout/Layout';
+import Footer from './components/footer/Footer'; 
 
 function App() {
   const initialTheme = localStorage.getItem('theme') || 'light';
@@ -45,6 +46,7 @@ function App() {
             handleLogout={handleLogout}
           >
             <Home />
+            
           </Layout>
         } />
 
@@ -59,7 +61,9 @@ function App() {
             <MyLists />
           </Layout>
         } />
+        
       </Routes>
+      <Footer/>
     </div>
   );
 }
