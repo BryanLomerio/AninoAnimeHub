@@ -4,3 +4,63 @@ body {
   height: 100%;
   font-family: "Outfit", sans-serif;
 }
+:root {
+    --background-color-light: #ffffff; 
+    --text-color-light: white; 
+    --background-color-dark: #000000; 
+    --text-color-dark: #ffffff;
+    --sidebar-background-light: #2c3e50; 
+    --sidebar-background-dark: #2c3e50; 
+    --content-background-light: #ecf0f1; 
+    --content-background-dark: #000000; 
+    --title-color-light: black; 
+    --title-color-dark: white; 
+}
+
+body.light .sidebar {
+    background-color: var(--sidebar-background-light);
+    color: var(--text-color-light);
+}
+
+body.light .content {
+    background-color: var(--content-background-light);
+    color: var(--text-color-light);
+}
+
+body.dark .sidebar {
+    background-color: var(--sidebar-background-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark .content {
+    background-color: var(--content-background-dark);
+    color: var(--text-color-dark);
+}
+
+.sidebar {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    width: auto;
+    height: 100vh; 
+    padding: 0 20px; 
+    position: relative; 
+}
+
+.sidebar ul {
+    margin-top: 100px; 
+    list-style-type: none; 
+    padding: 0; 
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+}
+body.dark .title {
+  color: var(--title-color-dark);
+}
+.title {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--title-color-light); 
+}
