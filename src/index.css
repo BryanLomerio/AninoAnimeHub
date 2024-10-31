@@ -4,6 +4,12 @@ body {
   height: 100%;
   font-family: "Outfit", sans-serif;
 }
+
+.app-container {
+    display: flex;
+
+}
+
 :root {
     --background-color-light: #ffffff; 
     --text-color-light: white; 
