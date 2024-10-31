@@ -1,35 +1,44 @@
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Outfit", sans-serif;
 }
 
 .app-container {
     display: flex;
-
 }
 
 :root {
     --background-color-light: #ffffff; 
-    --text-color-light: white; 
+    --text-color-light: black; 
     --background-color-dark: #000000; 
     --text-color-dark: #ffffff;
     --sidebar-background-light: #2c3e50; 
     --sidebar-background-dark: #2c3e50; 
     --content-background-light: #ecf0f1; 
     --content-background-dark: #121212; 
-    --title-color-light: black; 
-    --title-color-dark: white; 
+    --card-background-light: transparent; 
+    --card-background-dark: transparent; 
 }
 
 body.light .sidebar {
     background-color: var(--sidebar-background-light);
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
 }
 
 body.light .content {
     background-color: var(--content-background-light);
+    color: var(--text-color-light);
+}
+
+body.light .cards div {
+    background: transparent; 
+    color: var(--text-color-light);
+    padding: 0; 
+}
+
+body.light .title {
     color: var(--text-color-light);
 }
 
@@ -43,30 +52,21 @@ body.dark .content {
     color: var(--text-color-dark);
 }
 
-.sidebar {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
-    width: auto;
-    height: 100vh; 
-    padding: 0 20px; 
-    position: relative; 
+body.dark .cards div {
+    background: transparent; 
+    color: var(--text-color-dark);
+    padding: 0; 
 }
 
-.sidebar ul {
-    margin-top: 100px; 
-    list-style-type: none; 
-    padding: 0; 
-    position: relative; 
-    display: flex;
-    flex-direction: column; 
-    gap: 30px; 
-}
 body.dark .title {
-  color: var(--title-color-dark);
+    color: var(--text-color-dark);
 }
-.title {
-  display: flex;
-  justify-content: flex-end;
-  color: var(--title-color-light); 
+
+/* Play button hover effects for light and dark mode */
+body.light .play-button:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Light mode hover color */
+}
+
+body.dark .play-button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Dark mode hover color */
 }
