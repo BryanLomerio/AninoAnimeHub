@@ -1,6 +1,6 @@
 import './index.css';
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom'; 
 import Login from './auth/components/Login';
 import SignupForm from './auth/components/SignupForm';
 import Home from './views/home/Home'; 
@@ -12,6 +12,8 @@ function App() {
   const initialTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(initialTheme);
   const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
+
+  const location = useLocation(); 
 
   useEffect(() => {
     document.body.className = theme; 
@@ -30,6 +32,8 @@ function App() {
     alert("Logging out...");
   };
 
+  const showFooter = !['/', '/login', '/signup'].includes(location.pathname);
+
   return (
     <div>
       <Routes>
@@ -46,7 +50,6 @@ function App() {
             handleLogout={handleLogout}
           >
             <Home />
-            
           </Layout>
         } />
 
@@ -63,7 +66,7 @@ function App() {
         } />
         
       </Routes>
-      <Footer/>
+      {showFooter && <Footer />} 
     </div>
   );
 }

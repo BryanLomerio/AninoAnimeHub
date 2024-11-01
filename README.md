@@ -1,4 +1,4 @@
-# AninoAnime Project
+# AninoAnimeHub Project
 
 ## Key Features and Structure
 

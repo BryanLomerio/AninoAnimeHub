@@ -11,18 +11,21 @@ body {
 
 :root {
     --background-color-light: #ffffff; 
-    --text-color-light: black; 
-    --background-color-dark: #000000; 
-    --text-color-dark: #ffffff;
-    --sidebar-background-light: #2c3e50; 
-    --sidebar-background-dark: #2c3e50; 
-    --content-background-light: #ecf0f1; 
+    --text-color-light: #121212; 
+    --background-color-dark: #121212; 
+    --text-color-dark: #DEE4E7;
+    --sidebar-background-light: #343434; 
+    --sidebar-background-dark: rgb(255, 144, 0); 
+    --content-background-light: #DEE4E7; 
     --content-background-dark: #121212; 
+    --footer-background-light: #343434; 
+    --footer-background-dark: #28282B; 
     --card-background-light: transparent; 
     --card-background-dark: transparent; 
 }
 
-body.light .sidebar {
+body.light .sidebar,
+body.light .footer {
     background-color: var(--sidebar-background-light);
     color: var(--text-color-dark);
 }
@@ -42,7 +45,8 @@ body.light .title {
     color: var(--text-color-light);
 }
 
-body.dark .sidebar {
+body.dark .sidebar,
+body.dark .footer {
     background-color: var(--sidebar-background-dark);
     color: var(--text-color-dark);
 }
@@ -62,11 +66,54 @@ body.dark .title {
     color: var(--text-color-dark);
 }
 
-/* Play button hover effects for light and dark mode */
+body.dark .title::after{
+    color: black;
+}
+
 body.light .play-button:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Light mode hover color */
+    background-color: rgba(0, 0, 0, 0.3); 
 }
 
 body.dark .play-button:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Dark mode hover color */
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+
+body.dark .sidebar svg {
+    color: black; 
+}
+body.dark .sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.322); 
+}
+body.dark .sidebar li:hover .label {
+    color: rgb(0, 0, 0);  
+    background-color: rgb(255, 144, 0); 
+}
+
+body.dark .sidebar ul li:hover .label {
+    color: rgb(0, 0, 0); 
+    background-color: rgb(255, 144, 0); 
+}
+
+body.light .sidebar ul li:hover .label {
+    color: rgb(255, 255, 255); 
+    background-color: #662d91;
+}
+
+body.dark .filter-box{
+    background-color: rgb(255, 144, 0); 
+}
+body.dark .filter-title{
+    color: #121212;
+}
+body.dark .select{
+    background-color: #343a40;
+}
+
+body.light .filter-box{
+    background-color: #343434; 
+}
+
+body.light .filter-title{
+    color: white;
 }

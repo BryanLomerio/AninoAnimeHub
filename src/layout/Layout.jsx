@@ -69,14 +69,14 @@ const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handle
                 <ul className="settings">
                     <li>
                         <a href="https://toystore-tawny.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <FaStore size={25} color='yellow' />
+                            <FaStore size={25} color='white' />
                             <span className="label" style={{ color: 'white' }}>Anino's Collections</span>
                         </a>
                     </li>
                     <li>
                         <button onClick={toggleTheme} className="theme-toggle">
                             {isLightMode ? <MdDarkMode size={25} /> : <MdOutlineLightMode size={25} />}
-                            <span className="label">{isLightMode ? 'Light Mode' : 'Dark Mode'}</span>
+                            <span className="label">{isLightMode ? 'Switch to Dark Mode' : 'Switch to Light Mode'}</span>
                         </button>
                     </li>
                     <li>
