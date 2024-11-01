@@ -88,10 +88,14 @@ const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handle
 
             <main className="content">
                 {loading ? (
-                    <div className="loading-container">
+                    <div className="loading-container" style={{ 
+                        backgroundColor: isLightMode ? "var(--content-background-light)" : "var(--content-background-dark)", 
+                        color: isLightMode ? "var(--text-color-light)" : "var(--text-color-dark)"
+                    }}>
                         <img src={LoadingGif} alt="Loading..." className="loading-gif" />
                         <p className="loading-text">Loading.....</p>
                     </div>
+                    
                 ) : (
                     children
                 )}
