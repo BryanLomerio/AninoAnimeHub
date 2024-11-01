@@ -36,49 +36,50 @@ function App() {
   const showFooter = !['/', '/login', '/signup'].includes(location.pathname);
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Login />} /> 
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignupForm />} />
-        
-        <Route path="/home" element={
-          <Layout 
-            toggleTheme={toggleTheme} 
-            isLightMode={theme === 'light'}
-            isUserDropdownOpen={isUserDropdownOpen}
-            handleUserClick={handleUserClick}
-            handleLogout={handleLogout}
-          >
-            <Home />
-          </Layout>
-        } />
+    <div className='app-container'>
+      <div className='main-content'>
+        <Routes>
+          <Route path="/" element={<Login />} /> 
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignupForm />} />
+          
+          <Route path="/home" element={
+            <Layout 
+              toggleTheme={toggleTheme} 
+              isLightMode={theme === 'light'}
+              isUserDropdownOpen={isUserDropdownOpen}
+              handleUserClick={handleUserClick}
+              handleLogout={handleLogout}
+            >
+              <Home />
+            </Layout>
+          } />
 
-        <Route path="/mylists" element={
-          <Layout 
-            toggleTheme={toggleTheme} 
-            isLightMode={theme === 'light'}
-            isUserDropdownOpen={isUserDropdownOpen}
-            handleUserClick={handleUserClick}
-            handleLogout={handleLogout}
-          >
-            <MyLists />
-          </Layout>
-        } />
+          <Route path="/mylists" element={
+            <Layout 
+              toggleTheme={toggleTheme} 
+              isLightMode={theme === 'light'}
+              isUserDropdownOpen={isUserDropdownOpen}
+              handleUserClick={handleUserClick}
+              handleLogout={handleLogout}
+            >
+              <MyLists />
+            </Layout>
+          } />
 
-        <Route path="/anime/:animeId/episodes" element={
-          <Layout 
-            toggleTheme={toggleTheme} 
-            isLightMode={theme === 'light'}
-            isUserDropdownOpen={isUserDropdownOpen}
-            handleUserClick={handleUserClick}
-            handleLogout={handleLogout}
-          >
-            <Episodes />
-          </Layout>
-        } />
-        
-      </Routes>
+          <Route path="/anime/:animeId/episodes" element={
+            <Layout 
+              toggleTheme={toggleTheme} 
+              isLightMode={theme === 'light'}
+              isUserDropdownOpen={isUserDropdownOpen}
+              handleUserClick={handleUserClick}
+              handleLogout={handleLogout}
+            >
+              <Episodes />
+            </Layout>
+          } />
+        </Routes>
+      </div>
       {showFooter && <Footer />} 
     </div>
   );

@@ -7,17 +7,9 @@ import UserImg from "../assets/bryan.webp";
 import LoadingGif from "../assets/loading.gif";
 import './Layout.css';
 
-const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handleUserClick, handleLogout }) => {
-    const [loading, setLoading] = useState(false);
+const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handleUserClick, handleLogout, loading }) => { // Added loading prop
     const navigate = useNavigate();
     const location = useLocation();
-
-    useEffect(() => {
-        setLoading(true);
-        const timer = setTimeout(() => setLoading(false), 1800); 
-
-        return () => clearTimeout(timer);
-    }, [location]);
 
     return (
         <div className="layout-container">
@@ -95,7 +87,6 @@ const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handle
                         <img src={LoadingGif} alt="Loading..." className="loading-gif" />
                         <p className="loading-text">Loading.....</p>
                     </div>
-                    
                 ) : (
                     children
                 )}

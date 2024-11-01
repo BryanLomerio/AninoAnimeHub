@@ -5,8 +5,23 @@ body {
     font-family: "Outfit", sans-serif;
 }
 
+.main-content {
+    flex: 1;
+}
+
+
+body.dark {
+    background-color: var(--background-color-dark); 
+}
+
+body.light {
+    background-color: var(--background-color-light); 
+}
+
 .app-container {
-    display: flex;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
 :root {
@@ -31,7 +46,7 @@ body.light .footer {
 }
 
 body.light .content {
-    background-color: var(--content-background-light);
+    background-color: var(--content-background-#ecf0f1);
     color: var(--text-color-light);
 }
 
@@ -123,3 +138,5 @@ body.light .filter-title{
 body.light .store{
     color: rgb(255, 144, 0); 
 }
+
+
