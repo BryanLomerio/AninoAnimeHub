@@ -1,5 +1,6 @@
 .layout-container {
     display: flex; 
+    gap: 20px;
 }
 
 .User-img{
@@ -54,6 +55,11 @@
     height: 100vh; 
     padding: 0 20px; 
     position: fixed; 
+    width: 40px;
+    z-index: 1;
+    
+    
+    
 }
 
 .sidebar ul {
@@ -114,6 +120,9 @@
     flex-grow: 1; 
     padding: 20px; 
     background-color: #ecf0f1;
+    margin-left: 80px;
+
+    
 }
 
 .title {
