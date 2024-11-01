@@ -1,0 +1,79 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 20px 0;
+}
+
+.pagination-controls {
+   order: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.pagination-results {
+    order: 1;
+    position: relative;
+    left: 220px; 
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: black; 
+}
+
+body.dark .pagination button:disabled {
+    background-color: #3131312c; 
+    cursor: not-allowed;
+    color: rgba(240, 255, 255, 0.219);
+}
+
+body.dark .pagination button {
+    background-color: #151515; 
+    color: white; 
+}
+
+body.dark .pagination button:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.144); 
+}
+
+body.light .pagination button:hover:not(:disabled) {
+    background-color: rgba(22, 22, 22, 0.26); 
+}
+body.light .pagination button.active {
+    background-color: #696767 !important; 
+    color: white;
+}
+
+.pagination button.active {
+    background-color: rgb(50, 50, 50) !important;
+    color: white; 
+    border: 2px solid #f90; 
+}
+
+body.dark .pagination button.active {
+    background-color: #151515 !important; 
+    color: white;
+}
+
+body.dark button.pagination-btn {
+    background-color: #f90; 
+    color: black;
+    font-weight: bold;
+}

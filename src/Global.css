@@ -71,11 +71,13 @@ body.dark .title::after{
 }
 
 body.light .play-button:hover {
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: #662d915d; 
+    color: white;
 }
 
 body.dark .play-button:hover {
     background-color: rgba(255, 255, 255, 0.5); 
+    color: rgb(255, 144, 0);
 }
 
 
@@ -116,4 +118,8 @@ body.light .filter-box{
 
 body.light .filter-title{
     color: white;
+}
+
+body.light .store{
+    color: rgb(255, 144, 0); 
 }

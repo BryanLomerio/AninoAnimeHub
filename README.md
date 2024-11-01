@@ -10,7 +10,7 @@
 
 ### Home Component
 - **Main View Displaying Anime Data**:
-  - **Axios API Fetching**: Utilizes Axios to fetch data for top anime from the [Jikan API](https://jikan.moe/). This retrieves popular titles, including images and trailers, keeping users updated with current content.
+  - **Axios API Fetching**: Utilizes Axios to fetch data for top anime from the [Kitsu API](https://kitsu.docs.apiary.io/). This retrieves popular titles, including images and trailers, keeping users updated with current content.
   - **Anime Cards**: Presents anime details in a card format, showcasing the title and cover image. Users can click a "Play" button to view trailers in a modal.
   - **Load More Button**: Initially shows a limited number of anime titles, allowing users to load more dynamically without refreshing the page.
   - **Modal for Trailers**: Clicking the "Play" button opens a modal that plays the selected trailer video.

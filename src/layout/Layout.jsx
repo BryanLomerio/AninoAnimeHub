@@ -69,7 +69,7 @@ const Layout = ({ children, toggleTheme, isLightMode, isUserDropdownOpen, handle
                 <ul className="settings">
                     <li>
                         <a href="https://toystore-tawny.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <FaStore size={25} color='white' />
+                            <FaStore size={25} className='store'/>
                             <span className="label" style={{ color: 'white' }}>Anino's Collections</span>
                         </a>
                     </li>

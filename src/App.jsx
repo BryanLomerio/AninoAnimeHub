@@ -1,4 +1,4 @@
-import './index.css';
+import './Global.css';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom'; 
 import Login from './auth/components/Login';
@@ -7,6 +7,7 @@ import Home from './views/home/Home';
 import MyLists from './views/MyLists/MyLists'; 
 import Layout from './layout/Layout';
 import Footer from './components/footer/Footer'; 
+import Episodes from './views/episodes/Episodes';  
 
 function App() {
   const initialTheme = localStorage.getItem('theme') || 'light';
@@ -62,6 +63,18 @@ function App() {
             handleLogout={handleLogout}
           >
             <MyLists />
+          </Layout>
+        } />
+
+        <Route path="/anime/:animeId/episodes" element={
+          <Layout 
+            toggleTheme={toggleTheme} 
+            isLightMode={theme === 'light'}
+            isUserDropdownOpen={isUserDropdownOpen}
+            handleUserClick={handleUserClick}
+            handleLogout={handleLogout}
+          >
+            <Episodes />
           </Layout>
         } />
         
